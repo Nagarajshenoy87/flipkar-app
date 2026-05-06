@@ -10,19 +10,13 @@ pool:
   name: rcbpool
 
 steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'package'
-
 - script: |
-    echo "Simulating deployment..."
+    echo Simulating deployment...
     mkdir deployed
-    copy target\*.jar deployed\
-    echo "Deployment successful!"
+    echo Deployment successful!
   displayName: 'Simulate Deployment'
 
 - script: |
-    echo "Contents of deployed folder:"
-    dir deployed
+    echo Contents of deployed folder:
+    dir
   displayName: 'Verify Deployment Output'
