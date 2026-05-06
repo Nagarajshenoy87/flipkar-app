@@ -10,6 +10,8 @@ pool:
   name: rcbpool
 
 steps:
+- checkout: none
+
 - script: |
     echo Simulating deployment...
     mkdir deployed
